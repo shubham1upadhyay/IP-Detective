@@ -1,6 +1,7 @@
 const getInfoBtn = document.getElementById("get-info");
 // extracting the data fields
 const ipField = document.getElementById("ip-address");
+const ipF = document.getElementById("ipF");
 const cityField = document.getElementById("city");
 const latitudeField = document.getElementById("latitude");
 const longitudeField = document.getElementById("longitude");
@@ -23,7 +24,7 @@ getInfoBtn.addEventListener('click', ()=>{
       .then((res) => res.json())
       .then((data) => {
         let ipAddress = data.ip;
-  
+        ipF.innerText = data.ip;
         // Fetch additional information based on the IP address
         fetch(`https://ipinfo.io/${ipAddress}?token=a65aa5704d8782`)
           .then((response) => response.json())
@@ -34,7 +35,8 @@ getInfoBtn.addEventListener('click', ()=>{
             const timezone = data.timezone;
             const pincode = data.postal;
             localStorage.setItem("ip_add", ip);
-            // Display location on a map
+
+            ipField.innerText = data.ip;
             displayDetails(lat, lon, data);
             pinInfo(timezone, pincode);
             getPostOffices(pincode);
