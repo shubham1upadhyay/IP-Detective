@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IP search IP detect IP detective Know IP detail get IP info">
+    <title>IP Detective || Detectiveness Overloaded</title>
+    <link rel="shortcut icon" href="resource/logo1000001.png?" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="makeup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body class="bg-body-tertiary">
+
+   <div class="section-1">
+    <div class="container-fluid header">
+        <div class="card bg-transparent text-white pt-5 border-bottom-0 border-danger">
+            <div class="card-body">
+                <h4 class="fw-bolder">My Public IP Address :</h4>
+                <button type="button" id="get-info" class=" btn mt-5 w-25 bg-danger fw-bolder text-white">Get Info</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="text-danger">ALL RIGHT RESERVED.Vaastik @2023</p>
+    </div>
+   </div>
+
+
+
+
+
+   <!-- to diplay details -->
+   <div class="container-fluid p-3 result">
+    <div class="d-flex justify-content-between">
+        <h5 class="fw-bolder">My Public IP Address : <span id="ip-address"></span></h5>
+        <button type="button" id="go-back" class="btn btn-sm mt-2 mb-0 btn-dark fw-bolder">Go Back</button>
+    </div>
+
+    <div class="row mt-3 fw-bolder">
+        <div class="col"><p>Lat: <span id="latitude"></span></p></div>
+        <div class="col"><p>City: <span id="city"></span></p></div>
+        <div class="col"><p>Organisation: <span id="organisation"></span></p></div>
+    </div>
+
+    <div class="row fw-bolder">
+        <div class="col"><p>Long: <span id="longitude"></span></p></div>
+        <div class="col"><p>Region: <span id="region"></span></p></div>
+        <div class="col"><p>HostName: <span id="host-name"></span></p></div>
+    </div>
+    <iframe title="map" id="frame" class="map-display" width="100%" height="100%"></iframe>
+    <div class="fw-bolder">
+        <div><p>Time Zone: <span id="time-zone"></span></p></div>
+        <div><p>Date And Time: <span id="date-time"></span></p></div>
+        <div><p>Pincode: <span id="pincode"></span></p></div>
+        <div><p>Message: <span id="message"></span></p></div>
+    </div>
+
+    <div>
+        <!-- <i class="fa fa-search"></i> -->
+        <input name="search" id="search" type="search" class="fw-bolder text-black border-danger search border-bottom-0 form-control fw-semibold" placeholder="Filter by pincode or name"/>
+    </div>
+
+    <div id="filter-card">
+        <!-- post-offices will be displayed here -->
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
